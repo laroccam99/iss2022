@@ -6,6 +6,7 @@ public class RadarUsageMain {
             System.out.println("start");
             radarSupport.setUpRadarGui();
             radarSupport.update( "40", "60");
+
     }
     public static void main(String[] args) {
             new RadarUsageMain().doJob();

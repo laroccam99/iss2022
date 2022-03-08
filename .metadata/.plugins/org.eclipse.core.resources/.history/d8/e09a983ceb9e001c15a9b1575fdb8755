@@ -1,0 +1,7 @@
+package it.unibo.radarSystem22.interfaces;
+
+public interface IDistance {
+	  public void turnOn();
+	  public void turnOff();
+	  public boolean getState();
+	}
