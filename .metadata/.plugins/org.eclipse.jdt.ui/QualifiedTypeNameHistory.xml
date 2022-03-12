@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ILed"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.LedMock"/>
+    <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IDistance"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.utils.Distance"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.SonarMock"/>
+</qualifiedTypeNameHistroy>
