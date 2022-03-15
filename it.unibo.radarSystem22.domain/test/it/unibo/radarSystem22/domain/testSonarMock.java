@@ -1,33 +1,35 @@
 package it.unibo.radarSystem22.domain;
+import static org.junit.Assert.assertTrue;
+import org.junit.*;
 
-import org.junit.Test;
+import it.unibo.radarSystem22.domain.interfaces.ISonar;
+import it.unibo.radarSystem22.domain.utils.BasicUtils;
+import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+ 
 
-import it.unibo.radarSystem22.domain.mock.SonarMock;
-import it.unibo.radarSystem22.domain.utils.Distance;
-
-public class testSonarMock {
+public class TestSonarMock {
+	@Before
+	public void up() {
+		System.out.println("up");
+	}
 	
-	@Test
-	public void testSonarMock1() {
-		SonarMock sm = new SonarMock();
-		sm.activate();
-		Distance d0 = new Distance(0);
-		assert(sm.getDistance().getVal() == d0.getVal());
-	}
-
-	@Test
-	public void testIsActiveTrue() {
-		SonarMock sm = new SonarMock();
-		sm.activate();
-		assert(sm.isActive());
-	}
-
-	@Test
-	public void testIsActiveFalse() {
-		SonarMock sm = new SonarMock();
-		sm.activate();
-		sm.deactivate();
-		assert(!sm.isActive());
-	}
-
+	@After
+	public void down() {
+		System.out.println("down");		
+	}	
+	
+	@Test 
+	public void testSonarMock() {
+		DomainSystemConfig.simulation = true;
+		DomainSystemConfig.testing    = false;
+		DomainSystemConfig.sonarDelay = 10;		//quite fast generation ...
+		int delta = 1;
+		
+		ISonar sonar = DeviceFactory.createSonar();
+		new SonarConsumerForTesting( sonar, delta ).start();  //consuma
+		sonar.activate();		
+ 		while( sonar.isActive() ) { BasicUtils.delay(1000);} //to avoid premature exit
+ 	}
+	
+ 
 }

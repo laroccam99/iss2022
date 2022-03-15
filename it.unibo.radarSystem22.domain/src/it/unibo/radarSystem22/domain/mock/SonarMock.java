@@ -1,47 +1,34 @@
 package it.unibo.radarSystem22.domain.mock;
 
+import it.unibo.radarSystem22.domain.Distance;
 import it.unibo.radarSystem22.domain.interfaces.IDistance;
 import it.unibo.radarSystem22.domain.interfaces.ISonar;
-import it.unibo.radarSystem22.domain.utils.Distance;
+import it.unibo.radarSystem22.domain.models.SonarModel;
+import it.unibo.radarSystem22.domain.utils.BasicUtils;
+import it.unibo.radarSystem22.domain.utils.ColorsOut;
+import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
 
-public class SonarMock implements ISonar{
-	private Distance dist;
-	private boolean state;
-	
-	public SonarMock() {
-		this.dist=new Distance(0);
-	}
-	
+public class SonarMock extends SonarModel implements ISonar{
+private int delta = 1;
 	@Override
-	public void activate() {
-		int i=0, d=0;
-		
-		this.state = true;
-		for(i=90; i>=0 ;i--) {
-			this.dist = new Distance(i);
-			System.out.println("Distance: "+this.dist.getVal());
-			try {
-				Thread.sleep(250);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}		
+	protected void sonarSetUp() {
+		curVal = new Distance(90);		
+		ColorsOut.out("SonarMock | sonarSetUp curVal="+curVal);
 	}
-
-	@Override
-	public void deactivate() {
-		this.state = false;	
-	}
-
+	
 	@Override
 	public IDistance getDistance() {
-		return this.dist;
-	}
-
+		return curVal;
+	}	
 	@Override
-	public boolean isActive() {
-		return this.state;
-	}
-
+	protected void sonarProduce( ) {
+		if( DomainSystemConfig.testing ) {	//produces always the same value
+			updateDistance( DomainSystemConfig.testingDistance );			      
+		}else {
+			int v = curVal.getVal() - delta;
+			updateDistance( v );			    
+			stopped = ( v <= 0 );
+		}
+		BasicUtils.delay(DomainSystemConfig.sonarDelay);  //avoid fast generation
+ 	}
 }
