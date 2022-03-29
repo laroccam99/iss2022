@@ -7,9 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.radarSystem22"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.comm2022"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.radarSystem22.domain"/>
-			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.radarSystem22"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -29,5 +29,11 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 	</section>
 </section>
