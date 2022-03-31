@@ -10,7 +10,7 @@ import it.unibo.radarSystem22.sprint3.interpreters.LedApplInterpreter;
  
 public class LedApplHandler extends ApplMsgHandler {
 private IApplInterpreter ledInterpr;
-	//Factory Method
+
 	public static IApplMsgHandler create(String name, ILed led) {
 		return new LedApplHandler(name,led);
 	}

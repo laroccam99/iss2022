@@ -34,7 +34,7 @@ protected boolean stopped = true;
 	@Override
 	public void run() {
 	      try {
-		  	ColorsOut.out( "UdpServer | STARTING ... "  );
+		  	ColorsOut.out( "UdpServer | STARTING ... " + name, ColorsOut.BLUE  );
 			while( ! stopped ) {
 				//Wait a packet				 
 				ColorsOut.out( "UdpServer | waits a packet "  );	 
@@ -45,7 +45,7 @@ protected boolean stopped = true;
 	            int port = packet.getPort();
 	            UdpEndpoint client = new UdpEndpoint(address, port);
 	            //String received = new String(packet.getData(), 0, packet.getLength());
-	            ColorsOut.out( "UdpServer | received packet from " + client   ); 
+	            ColorsOut.out( "UdpServer | received packet from " + client, ColorsOut.BLUE   ); 
 	            UdpServerConnection conn = connectionsMap.get(client);
 	            if(conn == null) {
 	            	conn = new UdpServerConnection(socket, client, connectionsMap);
@@ -53,14 +53,14 @@ protected boolean stopped = true;
 			 		//Create HERE a message handler on the connection !!!
 			 		new UdpApplMessageHandler( userDefHandler, conn );		 	 		
             }else {
-	            	 ColorsOut.outappl("UdpServer | CONNECTION ALREADY SET with " + client, ColorsOut.GREEN   ); 
+	            	 ColorsOut.outappl("UdpServer | CONNECTION ALREADY SET with " + client, ColorsOut.BLUE  ); 
 	            }
 	            conn.handle(packet);		 
 		 		//Create a message handler on the connection NOT HERE!!
 		 		//new UdpApplMessageHandler( userDefHandler, conn );			 		
 			}//while
 		  }catch (Exception e) {  //Scatta quando la deactive esegue: serversock.close();
-			  ColorsOut.out( "UdpServer |  probably socket closed: " + e.getMessage(), ColorsOut.GREEN);		 
+			  ColorsOut.out( "UdpServer |  probably socket closed: " + e.getMessage(), ColorsOut.BLUE);		 
 		  }
 	}
 	
@@ -73,7 +73,7 @@ protected boolean stopped = true;
  
 	public void deactivate() {
 		try {
-			ColorsOut.out( "UdpServer |  DEACTIVATE serversock=" +  socket);
+			ColorsOut.out( "UdpServer |  DEACTIVATE serversock=" +  socket, ColorsOut.BLUE);
 			stopped = true;
 			socket.close();
 			connectionsMap.clear();

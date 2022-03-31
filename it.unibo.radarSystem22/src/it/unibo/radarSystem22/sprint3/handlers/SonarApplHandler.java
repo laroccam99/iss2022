@@ -13,7 +13,7 @@ import it.unibo.radarSystem22.sprint3.interpreters.SonarApplInterpreter;
 public class SonarApplHandler extends ApplMsgHandler  {
  
 private IApplInterpreter sonarIntepr;
-//Factory Method
+
 public static IApplMsgHandler create(String name, ISonar sonar) {
 		return new SonarApplHandler(name, sonar);	 
 }

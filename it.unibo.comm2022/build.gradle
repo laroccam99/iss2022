@@ -44,15 +44,18 @@ eclipse {
         sourceSets -= [sourceSets.main, sourceSets.test]
     }
 }
-/*
-mainClassName = 'it.unibo.xxx' //TODO
+
+ 
+
+
+//mainClassName = 'it.unibo.xxx' //TODO
 
 jar {
     from sourceSets.main.allSource
-    manifest {
-        attributes 'Main-Class': "$mainClassName"
-	}
+    //manifest { attributes 'Main-Class': "$mainClassName" }
 }
+
+/*
 distributions {
     main {
         contents {

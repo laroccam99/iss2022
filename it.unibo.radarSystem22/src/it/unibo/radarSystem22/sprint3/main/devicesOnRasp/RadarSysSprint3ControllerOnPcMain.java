@@ -49,7 +49,7 @@ public class RadarSysSprint3ControllerOnPcMain implements IApplication{
 		RadarSystemConfig.DLIMIT      		= 70;  
 		RadarSystemConfig.RadarGuiRemote    = false;		
 		RadarSystemConfig.raspAddr          = "localhost"; //"192.168.1.9";		 	
-		RadarSystemConfig.protcolType       = ProtocolType.tcp;	
+		RadarSystemConfig.protcolType       = ProtocolType.udp;	
 		
 		CommSystemConfig.tracing            = false;
 	}
