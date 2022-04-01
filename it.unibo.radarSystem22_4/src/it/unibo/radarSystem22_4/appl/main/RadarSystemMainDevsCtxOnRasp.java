@@ -61,11 +61,13 @@ public class RadarSystemMainDevsCtxOnRasp implements IApplication{
  	   led   = DeviceFactory.createLed(); 
 	   sonar = DeviceFactory.createSonar();
    
+	   BasicUtils.aboutThreads("After context creation");
+	   
  	   //contextServer  = new TcpContextServer("TcpCtxServer",RadarSystemConfig.ctxServerPort); 	   
 	   contextServer = new EnablerContext("ctx",""+RadarSystemConfig.ctxServerPort,
  			                  RadarSystemConfig.protcolType, new ContextMsgHandler("ctxH"));
 		//Registrazione dei componenti presso il contesto
- 	   IApplMsgHandler sonarHandler = SonarApplHandler.create("sonarH",sonar); 
+	   IApplMsgHandler sonarHandler = SonarApplHandler.create("sonarH",sonar); 
 	   IApplMsgHandler ledHandler   = LedApplHandler.create("ledH",led);		  
 	   contextServer.addComponent("sonar", sonarHandler);	//sonar NAME mandatory
 	   contextServer.addComponent("led",   ledHandler);		//led NAME mandatory
@@ -73,6 +75,7 @@ public class RadarSystemMainDevsCtxOnRasp implements IApplication{
 	
 	protected void execute() {		
 		contextServer.activate();
+		BasicUtils.aboutThreads("After context attivation");
 	}
 	
 	public static void main( String[] args) throws Exception {
