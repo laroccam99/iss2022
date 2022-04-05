@@ -11,7 +11,6 @@ public class ColorsOut {
 	public static final String WHITE_BACKGROUND    = "\u001B[47m";
 	public static final String BACKGROUND          = "";	//WHITE_BACKGROUND
  	 
-	
 	public static final String BLACK    = "\u001b[30m";
 	public static final String RED      = "\u001B[31m";
 	public static final String GREEN    = "\u001B[32m";
@@ -50,7 +49,7 @@ public class ColorsOut {
 		System.out.println(   BACKGROUND + color + m + ANSI_RESET);
 	}
 	
-	public static  void delay( int dt ) {
+	public static void delay( int dt ) {
 		try {
 			Thread.sleep(dt);
 		} catch (InterruptedException e) {
@@ -59,5 +58,3 @@ public class ColorsOut {
 	}
 
 }
-
- 
