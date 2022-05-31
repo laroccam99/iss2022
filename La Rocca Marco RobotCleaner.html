@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <!--
+<link rel="stylesheet" type="text/css" href="../css/issStyle1.css">
+<script type="text/javascript" src="../css/issStyle.js"></script>
+-->
+<style type="text/css">
+body
+{
+    margin-left:  30px;
+    margin-right: 30px;
+};
+
+P
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+};
+
+a, a:visited, a:active, a:link, a:hover {
+    text-decoration: underline;
+    color: #545454;
+    background-color: transparent;
+	font-size: 93%;
+}
+
+a:hover {
+    background-color: #cccccc;
+}
+
+
+hr {
+    clear: both;
+    height: 1px;
+    color: #242424;
+    background-color: transparent;
+}
+
+h1, h2, h3 {
+    color: #242424;
+    clear: left;
+    font: 100% Tahoma, Helvetica, Arial, sans-serif;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+top {
+	width: 100%;
+}
+
+
+#i {
+    color: #ff1010;
+}
+tt{
+	font-family: "Arial";
+    font-size: 90%;
+	color: #006600;
+}
+em{
+	font-family: "Arial";
+    font-size: 80%;
+	font-weight: bold;
+	border-style:solid;
+	border-color: #abe876;
+    color: #1632cc;
+}
+bc{
+	font-family: "Arial";
+	font-size: 90%;
+	font-weight: bold;
+    color: #990000;
+	background-color: #fcf8c7;
+}
+ks{
+	font-family: "Arial";
+	font-weight: bold;
+    color: #0000CD	;
+	font-size: 90%;
+}
+kc{
+	font-family: "Arial";
+	font-weight: bold;
+    color: #008000	;
+	font-size: 90%;
+}
+pre{
+	font-family: "Consolas";
+	font-size: 85%;
+	background-color: #f5f5f5;
+	border: 1.5px solid silver;
+	padding: 5px;
+}
+m{
+	font-family: "Helvetica";
+	line-height: 100%;
+ 	font-size: 75%;
+}
+div.body{
+	 
+    font-size: 18px;
+}
+k{
+    color: #990000;
+	font-weight: bold;
+	font-size: 90%;
+}
+h1 {
+    font-size: 150%;
+    background-color: #b2c0ff;
+	padding: 10px;
+}
+
+h2 {
+    background-color: #9ed8ff;
+    font-size: 130%;
+}
+
+h3 {
+	background-color: #e6ccff;
+    font-size: 100%;
+}
+h4 {
+    background-color: #ccffcc;
+    font-size: 100%;
+	width: 95%;
+	border-radius: 5px;
+	padding: 2px;
+}
+h5 {
+    background-color: #d5ffb0;
+    font-size: 100%;
+
+}
+div.req{
+	background-color: #d9ffb3;
+    font-size: 18px;
+	width: 700px;
+    border: 3px solid green;
+    padding: 15px;
+    margin: 10px;
+}
+div.remark{
+	background-color: #E3F2FD;
+    border: 1.5px solid #d5f2ed;
+    padding: 15px;
+    margin: 10px;
+	border-radius: 25px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+ol, ul, li {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+img {
+	border: 1.5px solid #d5f2ed
+
+}
+
+a, a:visited, a:active, a:link, a:hover {
+    text-decoration: underline;
+    color: #545454;
+    background-color: transparent;
+}
+
+div.wrapdesc{
+	width: 90%;
+	margin: auto;
+}
+
+div.imagedesc{
+	width: 85%;
+	margin: auto;
+}
+</style>
+    
+<head>
+   
+<title>radarSystem22</title></head>
+    
+<body>
+<div id="top">
+<h1>LABORATORIO DI INGEGNERIA DEI SISTEMI SOFTWARE <font size="5"></font> </h1>
+</div>  
+
+<div class="body"> 
+<h2>Introduction</h2>
+Progetto RobotCleaner
+ 
+<h2>Requirements</h2>
+
+ 
+<div class="remark">
+ 
+Si desidera muovere il Virtual Robot in modo da coprire tutta la superficie di una stanza vuota.
+
+<ul>
+</li> 
+</div>
+
+<h2>Requirement analysis</h2>
+ 
+ <li>Il VirtualRobot si muove in un ambiente virtuale chiamato Wenv.
+ <li>Il VirtualRobot ha la possibilità di muoversi solo in avanti, ha la possibilità di ruotarsi di 90 gradi verso sinistra o verso destra.
+ <li>La stanza è vuota, non sono presenti ostacoli, è rettangolare, dunque è formata da 4 pareti.
+ <li>Il VirtualRobot inizialmente è posizionato nell'angolo in alto a sinistra della stanza, rivolto verso il basso.
+ <li>Il VirtualRobot deve percorrere tutta la superficie della stanza vuota, deve accorgersi di aver percorso tutta la stanza.
+
+ </li>
+
+</div>
+
+<h2>Problem analysis</h2>
+ 
+<li>Per verificare che sia stata percorsa l'intera stanza è necessario almeno definire come è composta la stanza in termini di dimensioni. È fondamentale suddividere la stanza in porzioni più piccole, quadrate, con lato uguale ad un'unità di spazio percorso dal VirtualRobot. Per comodità ogni tile (mattonella) della stanza avrà come dimensioni la lunghezza stessa del VirtualRobot, in modo che all'inizio cominci all'interno di un tile intero.
+
+<li>La verifica della copertura della stanza può essere affrontata in più modi in base al percorso che effettuerà il VirtualRobot:
+<ol>
+<li>Il VirtualRobot può muoversi "per righe", ovvero andando sempre nella stessa direzione (inizialmente verso destra) fino a quando non si incontra la parete, poi muovendosi in basso di 1 tile e muovendosi nella direzione opposta di quella iniziale fino a quando non si incontra la parete, poi di nuovo in basso di 1 tile. Tutto ciò si ripete fino a quando ci sarà una collisione con la parete in basso.
+Questo approccio è efficiente, siccome il numero di passi del robot è uguale al numero dei tiles della stanza (non ci sono passi extra), inoltre è molto semplice da tenere sotto controllo.
+<li>Il VirtualRobot può muoversi "per colonne", ovvero andando sempre nella stessa direzione (inizialmente verso il basso) fino a quando non si incontra la parete, poi muovendosi verso destra di 1 tile e muovendosi nella direzione opposta di quella iniziale fino a quando non si incontra la parete, poi di nuovo verso destra di 1 tile. Tutto ciò si ripete fino a quando ci sarà una collisione con la parete destra.
+È virtualmente identico al movimento per righe, dunque ha gli stessi vantaggi.
+<li>Il VirtualRobot può muoversi anche in altri modi. 
+<ol>
+<li>Pattern quadrati: inizialmente si muove lungo i bordi della stanza e poi ad ogni ciclo successivo riduce le dimensioni del quadrato da percorrere di 1 tile)
+<li>Pattern a spirale: pattern iniziale lungo i bordi con movimenti ridotti di 1 tile ad ogni ciclo).
+</ol>
+
+</ol>
+I movimenti con pattern quadrato e a spirale non sono convenienti siccome  o si basano sul ripassare sulle stesse tile più volte, oppure perchè questi approcci diventano inutilmente complessi da gestire su stanze non quadrate.
+Dunque l'approccio consigliato è quello per righe o per colonne.
+</li>
+
+<h2>Autovalutazione</h2>
+<ol> 
+Autovaluto la mia analisi con C per una serie di motivi: 
+<li>ho l'impressione che si possa scavare e analizzare più in profondità oppure con termini più vicini alla macchina (con meno "fuffa"). 
+<li>Tutto sommato come contenuti è sovrapponibile alla sua analisi.
+</ol>
+ 
+<!-- USEFUL
+<table style="width:100%" border="1">
+<tr>
+<td style="width:50%">
+</td>
+<td></td>
+</tr>
+</table>
+-->
+	      	
+<br/><br/> 	
+</div>  
+
+<div style="background-color:rgba(86, 56, 253, 0.9); width:60%;text-align:left;color:white">
+By La Rocca Marco email: marco.larocca@studio.unibo.it  
+<img src="./img/alunno.png" alt="mbot" width="50%" height="50%">
+</div> 
+</body>
+</html>
