@@ -7,6 +7,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca"/>
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\unibo.wenvUsage22"/>
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\unibo.actor22"/>
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\it.unibo.radarSystem22_4"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.radarSystem22_4"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.radarSystem22"/>
 			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab\it.unibo.comm2022"/>
@@ -18,9 +22,11 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.buildship.ui.wizard.project.creation"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.buildship.ui.creationwizards"/>
+			<item value="org.eclipse.xtext.projectwiz"/>
 		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
@@ -36,5 +42,10 @@
 		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\unibo.basicrobot22"/>
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\it.unibo.virtualRobot2020"/>
+			<item value="C:\Users\hhitm\Desktop\INGEGNERIA DEI SISTEMI SOFTWARE\issLab La Rocca\unibo.actor22"/>
+		</list>
 	</section>
 </section>

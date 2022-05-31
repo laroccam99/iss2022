@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IDistance"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.utils.BasicUtils"/>
 </qualifiedTypeNameHistroy>

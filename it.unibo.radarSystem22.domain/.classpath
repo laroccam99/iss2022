@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4" exported="true"/>
 	<classpathentry kind="output" path="bin/default"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
 	<classpathentry sourcepath="C:/Users/hhitm/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/10500bc7aa7515ad5661de1a1f955396b53f7eb8/trident-1.3-sources.jar" kind="lib" path="C:/Users/hhitm/.gradle/caches/modules-2/files-2.1/org.pushingpixels/trident/1.3/a90e1fe1a5f47288e5820666179397dd10ca021/trident-1.3.jar">
@@ -20,22 +19,22 @@
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab/unibolibs/2p301.jar">
+	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab La Rocca/unibolibs/2p301.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab/unibolibs/uniboInterfaces.jar">
+	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab La Rocca/unibolibs/uniboInterfaces.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab/unibolibs/unibonoawtsupports.jar">
+	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab La Rocca/unibolibs/unibonoawtsupports.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab/unibolibs/radarPojo.jar">
+	<classpathentry kind="lib" path="C:/Users/hhitm/Desktop/INGEGNERIA DEI SISTEMI SOFTWARE/issLab La Rocca/unibolibs/radarPojo.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value=""/>
 		</attributes>

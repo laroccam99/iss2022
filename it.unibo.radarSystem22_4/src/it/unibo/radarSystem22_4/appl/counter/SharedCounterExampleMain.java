@@ -20,7 +20,7 @@ import it.unibo.radarSystem22_4.comm.utils.BasicUtils;
  */
 public class SharedCounterExampleMain  {
 private int ctxServerPort   = 7070;
-private String delay        = "1"; //con delay = 0 funziona
+private String delay        = "100"; //con delay = 0 funziona
 private ProtocolType protocol;
 IApplMessage msgDec = new ApplMessage(
 	      "msg( dec, dispatch, main, counter, dec(DELAY), 1 )"
